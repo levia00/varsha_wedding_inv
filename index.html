@@ -101,11 +101,11 @@ img{max-width:100%;display:block;}
   width: 145px;
   margin: 0 auto;
   position: absolute;
-  top: 30px;
+  top: 60px;
 }
 #opening  .orn-img{
   position: absolute;
-  top: -22px;
+  top: -10px;
   scale: 0.96;
 }
 @media screen and (max-width:520px){
@@ -182,7 +182,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
 #hero-frame .corner.br{bottom:0;right:0;border-left:none;border-top:none;}
 #hero .names{font-family:var(--font-script);font-size:clamp(38px,11vw,50px);color:var(--maroon);margin-top:26px;line-height:1.15;}
 #hero .amp{display:block;font-family:var(--font-heading);font-size:16px;letter-spacing:.3em;color:var(--vermilion);margin:6px 0;}
-#hero .date-pill{display:flex;gap:10px;align-items:center;margin-top:24px;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;font-family:var(--font-heading);font-size:11px;letter-spacing:.14em;color:var(--gold-dark);justify-content: center;}
+/* #hero .date-pill{display:flex;gap:10px;align-items:center;margin-top:24px;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;font-family:var(--font-heading);font-size:11px;letter-spacing:.14em;color:var(--gold-dark);justify-content: center;} */
 
 /* ---------- Scratch reveal ---------- */
 #scratch-section{background:linear-gradient(180deg,var(--maroon) 0%,var(--maroon-deep) 100%);text-align:center;color:var(--gold-light);}
@@ -296,8 +296,8 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     <div class="instruction">Two hearts, two souls, and one beautiful journey begins…
 </div>
     <div class="below">
-      <div class="date" id="opening-date">27 AUGUST 2026</div>
-      <div class="venue" id="opening-venue">SANKARNARAYANA KALYANA MADAPAM, ONGOLE</div>
+      <div class="date" id="opening-date"></div>
+      <div class="venue" id="opening-venue"></div>
     </div>
   </div>
 
@@ -320,7 +320,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
         <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
       </div>
       <h1 class="names reveal" id="hero-names">Hima Varsha<span class="amp">&amp;</span>Satya Roopesh</h1>
-      <div class="date-pill reveal" id="hero-date-pill">27 AUGUST 2026 · MUHURTHAM 11:07 AM</div>
+      <div class="date-pill reveal" id="hero-date-pill"></div>
     </section>
 
     <div class="divider reveal">
@@ -341,9 +341,9 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
       </div>
       <div class="scratch-wrap reveal-scale">
         <div class="scratch-message">
-          <div class="names">Hima Varsha</div>
-          <div class="amp">&amp;</div>
-          <div class="names" style="font-size:24px">Satya Roopesh</div>
+          <!-- <div class="names">Hima Varsha</div> -->
+          <!-- <div class="amp">&amp;</div> -->
+          <!-- <div class="names" style="font-size:24px">Satya Roopesh</div> -->
           <p class="line">Together with the blessings of their families, invite you to grace their wedding ceremony</p>
           <div class="details">
             27 AUGUST 2026<br/>
@@ -357,7 +357,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     </section>
 
     <!-- ---- 4. MAIN WEDDING INVITATION ---- -->
-    <section id="invitation">
+    <!-- <section id="invitation">
       <div class="eyebrow reveal">The Ceremony</div>
       <h2 class="section-title reveal">THE WEDDING</h2>
       <div class="invitation-card reveal-scale">
@@ -373,7 +373,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
           <div class="parents">Anna Venkatachalam &amp; Gayatri</div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ---- 5. INVITATION MESSAGE ---- -->
     <section id="invitation-message">
@@ -464,20 +464,20 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     </section> -->
 
     <!-- ---- 10. FINAL CLOSING ---- -->
-    <section id="closing">
-      <p class="msg reveal">Your presence and blessings will make our celebration even more special.</p>
+    <!-- <section id="closing"> -->
+      <!-- <p class="msg reveal">Your presence and blessings will make our celebration even more special.</p>
       <div class="names reveal" id="closing-names">HIMA VARSHA</div>
       <div class="heart reveal">♥</div>
       <div class="names reveal" id="closing-names-2">SATYA ROOPESH</div>
       <div class="date reveal" id="closing-date">27 AUGUST 2026</div>
       <div class="date reveal" id="closing-muhurtham" style="margin-top:2px;">MUHURTHAM • 11:07 AM</div>
       <div class="venue-line reveal" id="closing-venue">Sankarnarayana Kalyana Madapam, Ongole</div>
-      <div class="signoff reveal">With love and blessings</div>
-    </section>
+      <div class="signoff reveal">With love and blessings</div> -->
+    <!-- </section> -->
 
     <div class="config-note">We designers may go to un-noticed, Presenting P. Nandhikar, Vishwa .</div>
   </div>
-  <audio src="./song.mpeg" autoplay loop onloadedmetadata="this.currentTime=7"></audio>
+  <!-- <audio src="./song.mpeg" autoplay loop onloadedmetadata="this.currentTime=7"></audio> -->
 </div>
 
 <script>
@@ -519,13 +519,13 @@ const weddingConfig = {
    ================================================================ */
 const initials = weddingConfig.bride.name[0] + "<span> &hearts;</span> " + weddingConfig.groom.name[0];
 document.getElementById('opening-initials').innerHTML = initials;
-document.getElementById('opening-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
-document.getElementById('opening-venue').textContent = (weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location).toUpperCase();
+// document.getElementById('opening-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
+// document.getElementById('opening-venue').textContent = (weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location).toUpperCase();
 
 document.getElementById('hero-names').innerHTML =
   weddingConfig.bride.name + '<span class="amp">&amp;</span>' + weddingConfig.groom.name;
-document.getElementById('hero-date-pill').textContent =
-  weddingConfig.wedding.displayDate.toUpperCase() + ' · MUHURTHAM ' + weddingConfig.wedding.muhurtham;
+// document.getElementById('hero-date-pill').textContent =
+  // weddingConfig.wedding.displayDate.toUpperCase() + ' · MUHURTHAM ' + weddingConfig.wedding.muhurtham;
 
 document.getElementById('scratch-title').textContent = weddingConfig.scratchReveal.title;
 document.getElementById('scratch-instruction').textContent = weddingConfig.scratchReveal.instruction;
@@ -544,9 +544,9 @@ document.getElementById('detail-muhurtham').textContent = weddingConfig.wedding.
 document.getElementById('detail-venue').textContent = weddingConfig.wedding.venue;
 document.getElementById('detail-location').textContent = weddingConfig.wedding.location;
 
-document.getElementById('closing-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
-document.getElementById('closing-muhurtham').textContent = 'MUHURTHAM • ' + weddingConfig.wedding.muhurtham;
-document.getElementById('closing-venue').textContent = weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location;
+// document.getElementById('closing-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
+// document.getElementById('closing-muhurtham').textContent = 'MUHURTHAM • ' + weddingConfig.wedding.muhurtham;
+// document.getElementById('closing-venue').textContent = weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location;
 
 if (weddingConfig.media.backgroundMusic) {
   document.getElementById('bgm').src = weddingConfig.media.backgroundMusic;
