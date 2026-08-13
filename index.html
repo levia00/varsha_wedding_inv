@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Jost:wght@300;400;500;600&family=Felipa&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
@@ -101,20 +102,33 @@ img{max-width:100%;display:block;}
   width: 145px;
   margin: 0 auto;
   position: absolute;
-  top: 30px;
+  top: 60px;
 }
 #opening  .orn-img{
   position: absolute;
-  top: -22px;
+  top: -10px;
   scale: 0.96;
 }
 @media screen and (max-width:520px){
   #opening .orn-img{
-    height: 100vh;
+    height: 95vh;
   }
   #opening .eyebrow{
-    position: relative;
+    position: sticky;
     top: -10px;
+  }
+  #hero{
+    width: 100vw;
+  }
+  #hero .wed-pic{
+    position: relative;
+    top: -5.2rem;
+    z-index: 5;
+    width: 100%;
+  }
+  #hero .garland{
+    z-index: 7;
+    scale: 0.7;
   }
 }
 @keyframes float-slow{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-14px) rotate(6deg);}}
@@ -135,7 +149,7 @@ img{max-width:100%;display:block;}
 #opening-tap{margin-top:26px;font-family:var(--font-heading);font-size:12px;letter-spacing:.32em;color:var(--gold);opacity:0;animation:fade-in-up .9s var(--ease-out) .8s forwards, pulse-op 2.2s ease-in-out 1.8s infinite;}
 @keyframes pulse-op{0%,100%{opacity:.55}50%{opacity:1}}
 @keyframes fade-in-up{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-#opening .instruction{margin-top:12px;font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--gold-light);opacity:0;animation:fade-in-up .9s var(--ease-out) .95s forwards;}
+#opening .instruction{margin-top:22px;font-family:var(--font-serif);font-style:italic;font-size:16px;color:var(--gold-light);opacity:0;animation:fade-in-up .9s var(--ease-out) .95s forwards;position: relative;top: 1rem;}
 #opening .below{margin-top:30px;opacity:0;animation:fade-in-up .9s var(--ease-out) .65s forwards;}
 #opening .below .date{font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--gold-light);}
 #opening .below .venue{font-family:var(--font-serif);font-size:12px;color:var(--gold);margin-top:4px;}
@@ -160,19 +174,22 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
 
 /* ---------- Couple hero ---------- */
 #hero{
-  min-height:100vh;display:flex;flex-direction:column;justify-content:center;text-align:center;
+  height:93vh;display:flex;flex-direction:column;justify-content:center;text-align:center;
   background:radial-gradient(circle at 20% 0%, rgba(198,161,91,.18), transparent 45%), var(--ivory);
-  padding-top:70px;
+  /* padding-top:70px; */
 }
 #hero .garland{
   position: absolute;
   top: -30px;
   left: -2px;
-  scale: 0.9;
+  scale: 1;
 }
 #hero .together{font-family:var(--font-serif);font-style:italic;font-size:15px;color:var(--maroon);}
 #hero-frame{margin:24px auto 0;width:210px;height:260px;position:relative;}
 #hero-frame .ring1,#hero-frame .ring2{position:absolute;inset:0;border:1px solid var(--gold);}
+#hero-frame img{
+  width: 80%;
+}
 #hero-frame .ring2{inset:8px;border-width:1px;}
 #hero-frame .photo{position:absolute;inset:16px;background:linear-gradient(160deg,var(--paper),var(--beige));display:flex;align-items:center;justify-content:center;overflow:hidden;}
 #hero-frame .corner{position:absolute;width:20px;height:20px;border:1px solid var(--gold);}
@@ -182,7 +199,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
 #hero-frame .corner.br{bottom:0;right:0;border-left:none;border-top:none;}
 #hero .names{font-family:var(--font-script);font-size:clamp(38px,11vw,50px);color:var(--maroon);margin-top:26px;line-height:1.15;}
 #hero .amp{display:block;font-family:var(--font-heading);font-size:16px;letter-spacing:.3em;color:var(--vermilion);margin:6px 0;}
-#hero .date-pill{display:flex;gap:10px;align-items:center;margin-top:24px;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;font-family:var(--font-heading);font-size:11px;letter-spacing:.14em;color:var(--gold-dark);justify-content: center;}
+/* #hero .date-pill{display:flex;gap:10px;align-items:center;margin-top:24px;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;font-family:var(--font-heading);font-size:11px;letter-spacing:.14em;color:var(--gold-dark);justify-content: center;} */
 
 /* ---------- Scratch reveal ---------- */
 #scratch-section{background:linear-gradient(180deg,var(--maroon) 0%,var(--maroon-deep) 100%);text-align:center;color:var(--gold-light);}
@@ -196,7 +213,13 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
 .scratch-message .names{font-family:var(--font-script);font-size:26px;color:var(--maroon);}
 .scratch-message .amp{font-family:var(--font-heading);font-size:12px;letter-spacing:.2em;color:var(--vermilion);margin:2px 0;}
 .scratch-message .line{font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--ink);opacity:.85;max-width:230px;line-height:1.5;margin-top:8px;}
-.scratch-message .details{margin-top:14px;font-family:var(--font-heading);font-size:11px;letter-spacing:.1em;color:var(--maroon);line-height:1.9;}
+.scratch-message .details{margin-top:14px;font-family:var(--font-heading);font-size:16px;letter-spacing:.1em;color:var(--maroon);line-height:1.9;
+font-weight: 600;}
+.scratch-message .details span{
+  font-size: 0.7rem;
+  color: var(--ink);
+  font-weight: 200;
+}
 #scratch-canvas{position:absolute;inset:0;touch-action:none;cursor:pointer;}
 .scratch-fallback{margin-top:16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px;display:inline-block;}
 
@@ -288,17 +311,19 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     <img src="./orn22.png" class="orn-img" />
     <!-- <div class="frame-border">
     </div> -->
-    <div class="eyebrow">A Wedding Invitation</div>
+    <div class="eyebrow">Wedding Invitation</div>
     <div id="opening-seal">
       <div id="opening-initials">H&nbsp;&amp;&nbsp;S</div>
     </div>
     <div id="opening-tap">TAP TO OPEN</div>
+    <!-- <div class="instruction">Two hearts, two souls, and one beautiful journey begins…
+</div> -->
+    <div class="below">
+      <div class="date" id="opening-date"></div>
+      <div class="venue" id="opening-venue"></div>
+    </div>
     <div class="instruction">Two hearts, two souls, and one beautiful journey begins…
 </div>
-    <div class="below">
-      <div class="date" id="opening-date">27 AUGUST 2026</div>
-      <div class="venue" id="opening-venue">SANKARNARAYANA KALYANA MADAPAM, ONGOLE</div>
-    </div>
   </div>
 
   <!-- ================= MAIN ================= -->
@@ -307,20 +332,20 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     <!-- ---- 2. COUPLE INTRODUCTION ---- -->
     <section id="hero" class="paper-tex">
       <img src="./garland.png" class="garland" />
-      <p class="together reveal">With the blessings of our families</p>
-      <div id="hero-frame" class="reveal-scale">
-        <div class="ring1"></div><div class="ring2"></div>
-        <div class="photo">
-          <img src="./wed.png" />
+      <!-- <p class="together reveal">With the blessings of our families</p> -->
+      <img src="./wed.png" class="wed-pic" />
+      <!-- <div id="hero-frame" class="reveal-scale"> -->
+        <!-- <div class="ring1"></div><div class="ring2"></div> -->
+        <!-- <div class="photo"> -->
           <!-- <svg viewBox="0 0 120 120" width="70%" fill="none">
             <path d="M60 78c-18-6-33-21-33-37 0-11 8-18 18-18 7 0 12 4 15 10 3-6 8-10 15-10 10 0 18 7 18 18 0 16-15 31-33 37z" fill="#5C0F1F" opacity=".1"/>
             <circle cx="60" cy="36" r="4" fill="#B7351F"/>
           </svg> -->
-        </div>
-        <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-      </div>
-      <h1 class="names reveal" id="hero-names">Hima Varsha<span class="amp">&amp;</span>Satya Roopesh</h1>
-      <div class="date-pill reveal" id="hero-date-pill">27 AUGUST 2026 · MUHURTHAM 11:07 AM</div>
+        <!-- </div> -->
+        <!-- <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div> -->
+      <!-- </div> -->
+      <!-- <h1 class="names reveal" id="hero-names"><span class="amp"></span></h1> -->
+      <!-- <div class="date-pill reveal" id="hero-date-pill"></div> -->
     </section>
 
     <div class="divider reveal">
@@ -341,14 +366,14 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
       </div>
       <div class="scratch-wrap reveal-scale">
         <div class="scratch-message">
-          <div class="names">Hima Varsha</div>
-          <div class="amp">&amp;</div>
-          <div class="names" style="font-size:24px">Satya Roopesh</div>
+          <!-- <div class="names">Hima Varsha</div> -->
+          <!-- <div class="amp">&amp;</div> -->
+          <!-- <div class="names" style="font-size:24px">Satya Roopesh</div> -->
           <p class="line">Together with the blessings of their families, invite you to grace their wedding ceremony</p>
           <div class="details">
             27 AUGUST 2026<br/>
             MUHURTHAM — 11:07 AM<br/>
-            SANKARNARAYANA KALYANA MADAPAM, ONGOLE
+            <span>SANKARNARAYANA KALYANA MADAPAM, ONGOLE</span>
           </div>
         </div>
         <canvas id="scratch-canvas" role="img" aria-label="Scratch card revealing the wedding invitation for Hima Varsha and Satya Roopesh"></canvas>
@@ -357,7 +382,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     </section>
 
     <!-- ---- 4. MAIN WEDDING INVITATION ---- -->
-    <section id="invitation">
+    <!-- <section id="invitation">
       <div class="eyebrow reveal">The Ceremony</div>
       <h2 class="section-title reveal">THE WEDDING</h2>
       <div class="invitation-card reveal-scale">
@@ -373,7 +398,7 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
           <div class="parents">Anna Venkatachalam &amp; Gayatri</div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ---- 5. INVITATION MESSAGE ---- -->
     <section id="invitation-message">
@@ -464,20 +489,20 @@ h2.section-title{font-family:var(--font-heading);color:var(--maroon);font-size:2
     </section> -->
 
     <!-- ---- 10. FINAL CLOSING ---- -->
-    <section id="closing">
-      <p class="msg reveal">Your presence and blessings will make our celebration even more special.</p>
+    <!-- <section id="closing"> -->
+      <!-- <p class="msg reveal">Your presence and blessings will make our celebration even more special.</p>
       <div class="names reveal" id="closing-names">HIMA VARSHA</div>
       <div class="heart reveal">♥</div>
       <div class="names reveal" id="closing-names-2">SATYA ROOPESH</div>
       <div class="date reveal" id="closing-date">27 AUGUST 2026</div>
       <div class="date reveal" id="closing-muhurtham" style="margin-top:2px;">MUHURTHAM • 11:07 AM</div>
       <div class="venue-line reveal" id="closing-venue">Sankarnarayana Kalyana Madapam, Ongole</div>
-      <div class="signoff reveal">With love and blessings</div>
-    </section>
+      <div class="signoff reveal">With love and blessings</div> -->
+    <!-- </section> -->
 
     <div class="config-note">We designers may go to un-noticed, Presenting P. Nandhikar, Vishwa .</div>
   </div>
-  <audio src="./song.mpeg" autoplay loop onloadedmetadata="this.currentTime=7"></audio>
+  <audio src="./audio/song.mpeg" autoplay loop onloadedmetadata="this.currentTime=7"></audio>
 </div>
 
 <script>
@@ -519,13 +544,13 @@ const weddingConfig = {
    ================================================================ */
 const initials = weddingConfig.bride.name[0] + "<span> &hearts;</span> " + weddingConfig.groom.name[0];
 document.getElementById('opening-initials').innerHTML = initials;
-document.getElementById('opening-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
-document.getElementById('opening-venue').textContent = (weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location).toUpperCase();
+// document.getElementById('opening-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
+// document.getElementById('opening-venue').textContent = (weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location).toUpperCase();
 
-document.getElementById('hero-names').innerHTML =
-  weddingConfig.bride.name + '<span class="amp">&amp;</span>' + weddingConfig.groom.name;
-document.getElementById('hero-date-pill').textContent =
-  weddingConfig.wedding.displayDate.toUpperCase() + ' · MUHURTHAM ' + weddingConfig.wedding.muhurtham;
+// document.getElementById('hero-names').innerHTML =
+  // weddingConfig.bride.name + '<span class="amp">&amp;</span>' + weddingConfig.groom.name;
+// document.getElementById('hero-date-pill').textContent =
+  // weddingConfig.wedding.displayDate.toUpperCase() + ' · MUHURTHAM ' + weddingConfig.wedding.muhurtham;
 
 document.getElementById('scratch-title').textContent = weddingConfig.scratchReveal.title;
 document.getElementById('scratch-instruction').textContent = weddingConfig.scratchReveal.instruction;
@@ -544,9 +569,9 @@ document.getElementById('detail-muhurtham').textContent = weddingConfig.wedding.
 document.getElementById('detail-venue').textContent = weddingConfig.wedding.venue;
 document.getElementById('detail-location').textContent = weddingConfig.wedding.location;
 
-document.getElementById('closing-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
-document.getElementById('closing-muhurtham').textContent = 'MUHURTHAM • ' + weddingConfig.wedding.muhurtham;
-document.getElementById('closing-venue').textContent = weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location;
+// document.getElementById('closing-date').textContent = weddingConfig.wedding.displayDate.toUpperCase();
+// document.getElementById('closing-muhurtham').textContent = 'MUHURTHAM • ' + weddingConfig.wedding.muhurtham;
+// document.getElementById('closing-venue').textContent = weddingConfig.wedding.venue + ', ' + weddingConfig.wedding.location;
 
 if (weddingConfig.media.backgroundMusic) {
   document.getElementById('bgm').src = weddingConfig.media.backgroundMusic;
